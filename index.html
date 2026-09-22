@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced CSS - Full Stack Lab 2</title>
+    <title>Full Stack Web Development - Lab 03</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,18 +16,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#academic-management">Academic Portal</a></li>
                 </ul>
             </div>
         </div>
@@ -38,9 +30,9 @@
             <div class="hero-content">
                 <div>
                     <span class="badge bg-primary">Full Stack Development</span>
-                    <h1>Advanced CSS & Responsive Design</h1>
-                    <p>Learn Flexbox, positioning, pseudo-elements, filters and Bootstrap Flex utilities.</p>
-                    <a href="#skills" class="btn btn-primary">Explore Skills</a>
+                    <h1>Advanced CSS & JS Fundamentals</h1>
+                    <p>Lab 03: JavaScript Fundamentals & Academic Management System</p>
+                    <a href="#academic-management" class="btn btn-primary">Academic System</a>
                 </div>
                 <div class="profile-image-container">
                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Student profile" class="profile-image">
@@ -54,11 +46,10 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Student Profile</h2>
-                <p>This section demonstrates advanced CSS layout and positioning techniques.</p>
             </div>
             <div class="profile-card">
                 <h3>Full Stack Developer</h3>
-                <p>A student learning modern web development technologies including HTML, CSS, Bootstrap and JavaScript.</p>
+                <p>A student learning modern web development technologies including HTML, CSS, Bootstrap, and JavaScript.</p>
                 <button class="btn btn-success">View Profile</button>
             </div>
         </div>
@@ -68,25 +59,12 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Technical Skills</h2>
-                <p>Skills are arranged using CSS Flexbox.</p>
             </div>
             <div class="skills-container">
-                <div class="skill-box">
-                    <h4>HTML5</h4>
-                    <p>Web Page Structure</p>
-                </div>
-                <div class="skill-box">
-                    <h4>CSS3</h4>
-                    <p>Styling and Layout</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Bootstrap</h4>
-                    <p>Responsive UI</p>
-                </div>
-                <div class="skill-box">
-                    <h4>JavaScript</h4>
-                    <p>Web Interactivity</p>
-                </div>
+                <div class="skill-box"><h4>HTML5</h4><p>Structure</p></div>
+                <div class="skill-box"><h4>CSS3</h4><p>Styling</p></div>
+                <div class="skill-box"><h4>Bootstrap</h4><p>UI Grid</p></div>
+                <div class="skill-box"><h4>JavaScript</h4><p>Interactivity</p></div>
             </div>
         </div>
     </section>
@@ -95,80 +73,108 @@
         <div class="container">
             <div class="section-heading">
                 <h2>Projects</h2>
-                <p>Demonstration of CSS effects and pseudo-elements.</p>
             </div>
             <div class="project-container">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Web development project">
-                    </div>
                     <h4>Web Development</h4>
-                    <p>A responsive website created using HTML5, CSS3 and Bootstrap.</p>
-                    <button class="btn btn-primary">View Project</button>
+                    <p>Responsive Web Applications</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-image grayscale">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80" alt="Programming project">
-                    </div>
                     <h4>Programming Project</h4>
-                    <p>A programming project demonstrating problem solving and software development.</p>
-                    <button class="btn btn-success">View Project</button>
+                    <p>Algorithm & Logic Implementation</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Data analysis project">
+            </div>
+        </div>
+    </section>
+
+    <section id="academic-management" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Student Academic & Scholarship Management</h2>
+                <p class="text-muted">Dynamic Academic Evaluation Powered by JavaScript Fundamentals</p>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-3">Select Test Scenario</h5>
+                    <div class="btn-group flex-wrap" role="group">
+                        <button type="button" class="btn btn-outline-primary" onclick="loadScenario(1)">Scenario 1: High Performer</button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="loadScenario(2)">Scenario 2: Average Student</button>
+                        <button type="button" class="btn btn-outline-warning" onclick="loadScenario(3)">Scenario 3: Low Attendance</button>
+                        <button type="button" class="btn btn-outline-danger" onclick="loadScenario(4)">Scenario 4: Poor Performance</button>
                     </div>
-                    <h4>Data Project</h4>
-                    <p>A project demonstrating data analysis and visualization techniques.</p>
-                    <button class="btn btn-warning">View Project</button>
+                </div>
+            </div>
+
+            <div class="card shadow-lg border-0 mb-5">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="m-0">Student Academic Profile</h4>
+                    <span id="academic-status-badge" class="badge bg-success fs-6">Good Standing</span>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-6 border-end">
+                            <h5 class="text-primary border-bottom pb-2">Student Information</h5>
+                            <p><strong>Name:</strong> <span id="student-name">--</span></p>
+                            <p><strong>Registration No:</strong> <span id="student-reg">--</span></p>
+                            <p><strong>Program:</strong> <span id="student-program">--</span></p>
+                            <p><strong>Semester:</strong> <span id="student-semester">--</span></p>
+                            <p><strong>CGPA:</strong> <span id="student-cgpa">--</span></p>
+                            <p><strong>Attendance:</strong> <span id="student-attendance">--</span>%</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="text-primary border-bottom pb-2">Academic & Scholarship Evaluation</h5>
+                            <p><strong>Assessment Marks:</strong> 
+                                Assignments: <span id="marks-assignment">--</span>/20, 
+                                Midterm: <span id="marks-midterm">--</span>/30, 
+                                Final Exam: <span id="marks-final">--</span>/50
+                            </p>
+                            <p><strong>Total Marks:</strong> <span id="marks-total">--</span> / 100</p>
+                            <p><strong>Percentage:</strong> <span id="marks-percentage">--</span>%</p>
+                            <p><strong>Grade:</strong> <span id="marks-grade" class="fw-bold">--</span></p>
+                            <p><strong>Pass / Fail Status:</strong> <span id="marks-status" class="fw-bold">--</span></p>
+                            <p><strong>Scholarship Category:</strong> <span id="scholarship-status" class="badge bg-secondary fs-6">--</span></p>
+                            <p><strong>Academic Status:</strong> <span id="academic-status" class="fw-bold">--</span></p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="text-secondary">Formatted Report Output</h5>
+                        <pre id="report-output" class="bg-dark text-success p-3 rounded font-monospace"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <div class="card-header bg-warning text-dark fw-bold">Part J — Hoisting Demonstration</div>
+                        <div class="card-body">
+                            <div id="hoistingOutput" class="p-2 bg-light border rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-info">
+                        <div class="card-header bg-info text-white fw-bold">Part K — Operators Demonstration</div>
+                        <div class="card-body">
+                            <div id="operatorOutput" class="p-2 bg-light border rounded small"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bootstrap-flex-section py-5">
+    <footer class="footer bg-dark text-white py-3 text-center">
         <div class="container">
-            <div class="section-heading">
-                <h2>Bootstrap Flex Utilities</h2>
-                <p>Bootstrap Flex utility classes can be used without writing custom Flexbox CSS.</p>
-            </div>
-            <div class="d-flex justify-content-evenly align-items-center flex-wrap gap-3 bootstrap-demo">
-                <div class="flex-item">HTML5</div>
-                <div class="flex-item">CSS3</div>
-                <div class="flex-item">Bootstrap</div>
-                <div class="flex-item">JavaScript</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="position-section py-5">
-        <div class="container">
-            <div class="section-heading">
-                <h2>CSS Positioning</h2>
-                <p>The following card demonstrates relative and absolute positioning.</p>
-            </div>
-            <div class="position-card">
-                <h3>Positioning Example</h3>
-                <p>This card uses position: relative. The badge uses position: absolute.</p>
-                <span class="featured-badge">Featured</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section py-5">
-        <div class="container text-center">
-            <h2>Contact</h2>
-            <p>Full Stack Web Development Laboratory</p>
-            <button class="btn btn-dark">Contact Us</button>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2026 Full Stack Web Development Lab 2</p>
+            <p>&copy; 2026 Full Stack Web Development — Lab 03 Implementation</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
